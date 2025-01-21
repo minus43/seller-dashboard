@@ -11,23 +11,31 @@ function Header() {
   };
 
   return (
-    <AppBar 
-      position="relative"
-      sx={{ 
+    <AppBar
+      position='relative'
+      sx={{
         zIndex: (theme) => theme.zIndex.drawer + 1,
         backgroundColor: '#1976d2',
         boxShadow: 'none',
         borderBottom: 1,
-        borderColor: 'divider'
+        borderColor: 'divider',
       }}
     >
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography
+          variant='h6'
+          component='div'
+          sx={{
+            flexGrow: 1,
+            cursor: 'pointer',
+          }}
+          onClick={() => navigate('/statistics')}
+        >
           판매자 대시보드
         </Typography>
         <Box>
-          <Button 
-            color="inherit" 
+          <Button
+            color='inherit'
             onClick={handleLogout}
             startIcon={<LogoutIcon />}
           >
